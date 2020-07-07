@@ -77,9 +77,9 @@ class ParkingFacilityServiceImpl : ParkingFacilityService {
             chargingStationsResponse.parkingFacilityList = itemDetailsList
 
         } catch (ioException: IOException) {
-
+            ioException.printStackTrace()
         } catch (exception: Exception) {
-
+            exception.printStackTrace()
         }
         return chargingStationsResponse
     }
