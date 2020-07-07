@@ -18,7 +18,6 @@ class ParkingFacilityServiceImpl : ParkingFacilityService {
     override fun getParkingFacilityDetails(city : String): String? {
 
         var longitudeAndLatitude = getLongitudeAndLatitude(city)
-        println("${city} ====== ${longitudeAndLatitude}")
 
         if (longitudeAndLatitude == null)  {
             throw CityNotFoundException("Given City not found!!!!")
