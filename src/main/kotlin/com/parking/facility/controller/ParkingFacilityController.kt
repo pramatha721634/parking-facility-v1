@@ -1,5 +1,6 @@
 package com.parking.facility.controller
 
+import com.charging.stations.response.ChargingStationsResponse
 import com.parking.facility.rest.ParkingFacilityService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.web.bind.annotation.GetMapping
@@ -13,7 +14,7 @@ class ParkingFacilityController {
     lateinit var parkingFacilityService: ParkingFacilityService
 
     @GetMapping("/parking_facility/{city}")
-    fun getParkingFacilityDetails(@PathVariable city: String): String? {
+    fun getParkingFacilityDetails(@PathVariable city: String): ChargingStationsResponse? {
         return parkingFacilityService.getParkingFacilityDetails(city)
     }
 }
